@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         user: UserSerializer.new(user)
       }, status: :ok
     else
-      render json: { error: "Invalid email or password" }, status: :unauthorized
+      render_error(messages: ["Invalid email or password"], status: :unauthorized)
     end
   end
 
