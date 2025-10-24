@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :decks
-  resources :cards
+  resources :decks do
+    resources :cards
+  end
 end

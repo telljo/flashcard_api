@@ -15,7 +15,7 @@ class DecksController < ApplicationController
     if @deck.destroy
       head :no_content
     else
-      render_erro(messages: @deck.errors.full_messages, status: :unprocessable_entity)
+      render_error(messages: @deck.errors.full_messages, status: :unprocessable_entity)
     end
   end
 

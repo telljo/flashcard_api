@@ -14,6 +14,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_20_182314) do
   create_table "cards", force: :cascade do |t|
     t.string "front", null: false
     t.string "back", null: false
+    t.string "hint"
+    t.datetime "last_reviewed_at"
+    t.integer "review_count", default: 0
     t.integer "deck_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
